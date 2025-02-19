@@ -16,27 +16,48 @@ The **Food Recipe Sharing App** is a web-based platform where users can **browse
 
 ---
 
-## 🛠️ Technology Stack
-- **Frontend:** React.js, Tailwind CSS
-- **Routing:** React Router
-- **State Management:** React Hooks (useState, useEffect)
-- **Icons & Animations:** React Icons, Framer Motion
-- **API Calls:** Axios (Mock Data)
+## 🚀 How It Works
+
+### 🔹 User Authentication
+- Users can register and log in using their **email and password**.
+- User authentication is handled using **React Context API** or **Redux** (if used).
+- Authentication state is stored in local storage for session persistence.
+
+### 🔹 Recipe Management
+- Users can **add, edit, and delete recipes**.
+- Each recipe includes:
+  - ✅ Title
+  - ✅ Ingredients
+  - ✅ Steps
+  - ✅ Image Upload
+  - ✅ Category (Vegetarian, Vegan, Non-Vegetarian, etc.)
+
+### 🔹 Recipe Search & Filters
+- Users can search recipes by **name, category, rating, or dietary preference**.
+- Filtering options allow users to find **budget-friendly** or **healthy recipes**.
+
+### 🔹 Reviews & Ratings
+- Users can **rate** and **review** recipes.
+- Average ratings are displayed with **star icons**.
+
+### 🔹 Shopping List Feature
+- Users can add ingredients from recipes to a **personal shopping list**.
+- The shopping list is stored in **local storage** for later access.
 
 ---
 
-## 📂 Project Folder Structure
+
+
+## 🛠️ Installation & Setup
 ```bash
-src/
-│── components/
-│   ├── Navbar.js
-│   ├── SearchBar.js
-│   ├── RecipeCard.js
-│── pages/
-│   ├── Home.js
-│   ├── RecipeDetails.js
-│   ├── AddRecipe.js
-│   ├── Login.js
-│   ├── Register.js
-│── App.js
-│── index.js
+# Clone the repository
+git clone https://github.com/yourusername/food-recipe-app.git
+
+# Navigate into the project folder
+cd food-recipe-app
+
+# Install dependencies
+npm install
+
+# Start the development server
+npm start
