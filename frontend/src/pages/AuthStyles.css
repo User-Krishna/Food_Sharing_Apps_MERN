@@ -1,0 +1,138 @@
+/* Auth Container */
+.auth-container {
+    width: 100%;
+    max-width: 450px;
+    padding: 40px;
+    background-color: rgba(29, 27, 27, 0.904); /* Dark background with opacity */
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(69, 68, 68, 0.5); /* Deep shadow for 3D effect */
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.auth-container:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.7); /* Stronger shadow on hover */
+}
+
+/* Auth Form */
+.auth-form {
+    animation: fadeIn 0.8s ease-out; /* Fade-in animation */
+}
+
+/* Heading Styles */
+.auth-form h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #ffdd57; /* Gold color */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s ease-in-out;
+}
+
+.auth-form h2:hover {
+    color: #fff; /* Hover color change */
+}
+
+/* Input Fields */
+/* Input Fields */
+.auth-form input {
+    width: 100%; /* Use full width within the container */
+    padding: 12px; /* Adjust padding for consistent spacing */
+    margin: 15px 0; /* Equal margin on top and bottom */
+    border: 1px solid #fff;
+    border-radius: 8px;
+    font-size: 1rem;
+    background: rgba(0, 0, 0, 0.3); /* Darker background for better contrast */
+    color: #fff; /* White text for visibility */
+    box-sizing: border-box; /* Ensures padding doesn't add extra width */
+    transition: all 0.3s ease-in-out;
+}
+
+.auth-form input::placeholder {
+    color: rgba(255, 255, 255, 0.7); /* Lighter placeholder text */
+}
+
+/* Focus state on inputs */
+.auth-form input:focus {
+    outline: none;
+    border-color: #ffdd57; /* Gold border on focus */
+    box-shadow: 0 0 10px rgba(255, 221, 87, 0.5);
+    background: rgba(0, 0, 0, 0.5); /* Slightly darker focus background */
+}
+
+
+/* Submit Button */
+.auth-btn {
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(45deg, #ffdd57, #ff7f50); /* Gradient effect */
+    color: #000;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s ease;
+    margin-top: 10px;
+    border-radius: 8px;
+    box-shadow: 0 6px 15px rgba(0, 123, 255, 0.3); /* Button shadow */
+}
+
+.auth-btn:hover {
+    background: linear-gradient(45deg, #ff7f50, #ff4500);
+    transform: scale(1.05); /* Slight scale-up effect */
+}
+
+.auth-btn:active {
+    transform: translateY(2px); /* Pressed effect */
+}
+
+/* Links Section */
+.auth-links {
+    margin-top: 25px;
+}
+
+.auth-links a {
+    color: #ffdd57;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.auth-links a:hover {
+    color: #ff4500;
+    transform: scale(1.1); /* Slight scale effect */
+    text-decoration: underline;
+}
+
+/* Fade-In Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .auth-container {
+        padding: 20px;
+        max-width: 90%;
+    }
+    .auth-form h2 {
+        font-size: 24px;
+    }
+    .auth-form input {
+        padding: 12px;
+        font-size: 14px;
+    }
+    .auth-btn {
+        font-size: 16px;
+        padding: 12px;
+    }
+}

@@ -1,0 +1,751 @@
+/* General Styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+.home-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #333;
+  color: #fff;
+}
+
+/* Header Left Section */
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.header-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.header-actions button,
+.cart-btn {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  background-color: #ff6347;
+  color: #fff;
+  cursor: pointer;
+}
+
+.cart-logo {
+  width: 20px;
+  height: 20px;
+  margin-right: 0.5rem;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.search-bar input {
+  padding: 0.5rem;
+  border: none;
+  border-radius: 4px;
+  width: 250px;
+  margin-top: 0rem;
+}
+
+/* Cart Modal */
+/* Cart Logo as Background */
+.cart-logo {
+  width: 50px;
+  /* Increased size of the image */
+  height: 50px;
+  /* Increased size of the image */
+  background-image: url('trolley.png');
+  /* Path to your image */
+  background-size: contain;
+  /* Ensure the image fits within the container */
+  background-repeat: no-repeat;
+  /* Prevent the image from repeating */
+  background-position: center;
+  /* Center the image */
+  cursor: pointer;
+  /* Makes it clickable */
+  display: inline-block;
+  /* Ensures it doesn't show as a block */
+  border: none;
+  /* Removes any border */
+  box-shadow: none;
+  /* Removes any shadow if present */
+}
+
+.cart-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  display: block;
+  font-size: 1.5em;
+  margin-block-start: 0.83em;
+  margin-block-end: 0.83em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+  unicode-bidi: isolate;
+  text-align: center;
+  /* Centers the text horizontally */
+}
+
+.cart-item img {
+  width: 50px;
+  height: 50px;
+  margin-right: 1rem;
+}
+
+/* Categories Section */
+.categories-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 60px;
+  /* Adjust space between images */
+  margin-top: 20px;
+
+}
+
+.category-item {
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+  width: 150px;
+  /* Adjust width of each item */
+
+}
+
+.category-item:hover {
+  transform: scale(1.1);
+  /* Zoom effect on hover */
+}
+
+.category-image {
+  width: 100%;
+  /* Image fills the width of its container */
+  height: 150px;
+  /* Set fixed height for images */
+  object-fit: cover;
+  /* Maintain image aspect ratio */
+  border-radius: 10px;
+  /* Rounded corners */
+  border: 2px solid #ddd;
+  /* Border around images */
+}
+
+.category-item p {
+  margin-top: 10px;
+  /* Space between image and text */
+  font-weight: bold;
+  font-size: 16px;
+  /* Adjust text size */
+  color: #333;
+  /* Text color */
+}
+
+
+
+
+/* Divider Style */
+.divider {
+  width: 100%;
+  height: 3px;
+  /* Increased height for a more prominent divider */
+  background-color: #333;
+  /* Darker color */
+  margin: 1px 0;
+  /* Space around the divider */
+}
+
+
+
+/* Recipe Grid Section */
+.recipe-item {
+  background-color: #fff;
+  padding: 1rem;
+  /* Reduced padding */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Reduced shadow size */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  font-size: 0.9rem;
+  /* Reduced font size */
+  max-width: 210px;
+  /* Set a max width for the recipe item */
+  margin: 0 auto;
+  /* Center the item */
+}
+
+.recipe-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  /* Changed from 3 to 4 columns */
+  gap: 2rem;
+}
+
+.recipe-item:hover {
+  transform: translateY(-8px);
+  /* Slightly reduced hover effect */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  /* Reduced shadow size */
+}
+
+
+.recipe-image {
+  width: 100%;
+  height: 150px;
+  /* Reduced height */
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.recipe-info {
+  margin-top: 0.8rem;
+  /* Reduced margin */
+}
+
+.recipe-info h3 {
+  font-size: 1rem;
+  /* Smaller font size */
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.recipe-info p {
+  font-size: 0.8rem;
+  /* Smaller font size */
+  color: #555;
+  margin-bottom: 0.8rem;
+}
+
+.recipe-price {
+  font-size: 2rem;
+  /* Larger font size */
+  font-weight: 900;
+  /* Stronger bold weight */
+  color: #ff6347;
+  margin-bottom: 0.8rem;
+}
+
+
+
+.recipe-rating {
+  font-size: 0.8rem;
+  /* Smaller font size */
+  color: #888;
+  margin-bottom: 0.8rem;
+}
+
+.view-recipe-btn,
+.add-to-cart-btn,
+.add-to-favorites-btn {
+  padding: 0.5rem 1rem;
+  /* Smaller padding */
+  font-size: 0.8rem;
+  /* Smaller text */
+  margin-right: 0.5rem;
+  border: none;
+  border-radius: 4px;
+  background-color: #ff6347;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.view-recipe-btn:hover,
+.add-to-cart-btn:hover,
+.add-to-favorites-btn:hover {
+  background-color: #e5533d;
+}
+
+/* Pagination Styles */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  gap: 0.5rem;
+  margin-left: 70rem;
+}
+
+.pagination button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  background-color: #ddd;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.pagination button.active {
+  background-color: #ff6347;
+  color: #fff;
+}
+
+.pagination button:hover:not(:disabled) {
+  background-color: #ff6347;
+  color: #fff;
+}
+
+.pagination button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+
+/* New Styles for Rating Stars */
+.rating-stars {
+  display: inline-block;
+}
+
+.star {
+  color: gold;
+}
+
+.star.half {
+  color: rgba(255, 223, 0, 0.5);
+}
+
+.star:empty {
+  color: #e4e4e4;
+}
+
+/* New Styles for Action Buttons */
+.recipe-actions button {
+  padding: 10px;
+  margin: 5px;
+  font-size: 14px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.recipe-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  /* Space between buttons */
+  margin-top: 10px;
+}
+
+.recipe-btn {
+  width: 80%;
+  /* Make buttons uniform in width */
+  padding: 1px;
+  border-radius: 5px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.view-details {
+  background-color: #4CAF50;
+  width: 90%;
+  /* Increase width */
+  max-width: 250px;
+  /* Optional: Set a max width */
+}
+
+
+.save-btn {
+  background-color: #FF9800;
+}
+
+.share-btn {
+  background-color: #2196F3;
+}
+
+.recipe-btn:hover {
+  opacity: 0.8;
+}
+
+.recipe-actions .action-btn {
+  background-color: #e5533d;
+  color: white;
+}
+
+.recipe-actions .action-btn:hover {
+  opacity: 0.9;
+}
+
+.recipe-actions .favorite-btn {
+  background-color: #f8c028;
+  color: white;
+}
+
+.recipe-actions .favorite-btn:hover {
+  opacity: 0.9;
+}
+
+.recipe-actions .view-btn {
+  background-color: #4688b3;
+  color: white;
+}
+
+.recipe-actions .view-btn:hover {
+  opacity: 0.9;
+}
+
+/* Footer Section */
+.footer {
+  margin-top: 2rem;
+  padding: 0.4rem;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+}
+
+
+
+/* Hero Section */
+.hero-section {
+  position: relative;
+  background-image: url('main.jpg');
+  /* Change this to your image path */
+  background-size: cover;
+  /* Makes the image cover the entire section */
+  background-position: center;
+  /* Centers the image */
+  background-repeat: no-repeat;
+  height: 230px;
+  /* Adjust the height as needed */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  /* Text color */
+}
+
+.hero-content {
+  text-align: center;
+  z-index: 1;
+  /* Ensures text is on top of the image */
+}
+
+.hero-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: blue;
+}
+
+.hero-content p {
+  font-size: 1.6rem;
+  margin-bottom: 2rem;
+  color: black;
+}
+
+.cta-btn {
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+  background-color: #ff6347;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.cta-btn:hover {
+  background-color: #e5533d;
+}
+
+/* Customer Reviews Section */
+.customer-reviews {
+  padding: 2rem;
+  text-align: center;
+  max-width: 80%;
+  /* Adjust width as needed */
+  margin: 0 auto;
+  overflow: hidden;
+  /* Hide overflow to prevent scroll bars */
+  position: relative;
+}
+
+.review-slider {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2rem;
+  position: relative;
+  animation: slideRightToLeft 5s linear infinite;
+  white-space: nowrap;
+  /* Prevents wrapping of reviews */
+}
+
+@keyframes slideRightToLeft {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+    /* Move all items completely out of view (half of the total width) */
+  }
+}
+
+.review-item {
+  text-align: center;
+  min-width: 250px;
+  /* Ensures each review box has a minimum width */
+  background-color: #fff;
+  /* White background for individual review boxes */
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Box shadow to make it stand out */
+  flex-shrink: 0;
+  /* Prevents shrinking */
+}
+
+.review-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+.review-item h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.review-item p {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* RecipeDetailPage Styles */
+.recipe-detail-container {
+  font-family: 'Arial', sans-serif;
+  padding: 30px 20px;
+  background: linear-gradient(135deg, #f3f4f6, #e0e0e0);
+  min-height: 100vh;
+}
+
+.back-link {
+  color: #007bff;
+  text-decoration: none;
+  font-size: 20px;
+  margin-bottom: 25px;
+  display: inline-block;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+  color: #0056b3;
+}
+
+.recipe-detail {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: #fff;
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.1);
+  padding: 25px;
+  border-radius: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  transition: all 0.3s ease;
+}
+
+.recipe-detail:hover {
+  box-shadow: 0 10px 50px rgba(0, 0, 0, 0.2);
+}
+
+.recipe-image-container {
+  width: 45%;
+  margin-right: 30px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  border-radius: 15px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.recipe-image-container:hover {
+  transform: scale(1.05);
+}
+
+.recipe-image {
+  width: 184.6px !important;
+  height: 184.6px !important;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+
+.recipe-info {
+  width: 50%;
+  text-align: left;
+  padding-top: 10px;
+}
+
+.recipe-title {
+  font-size: 36px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.recipe-description {
+  font-size: 18px;
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 25px;
+  font-style: italic;
+}
+
+.recipe-additional-details {
+  background-color: #f1f1f1;
+  padding: 20px;
+  border-radius: 15px;
+  margin-bottom: 25px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.recipe-additional-details p {
+  font-size: 16px;
+  color: #333;
+}
+
+.recipe-additional-details p strong {
+  color: #007bff;
+}
+
+.recipe-ingredients,
+.recipe-instructions {
+  margin-bottom: 30px;
+}
+
+.recipe-ingredients h3,
+.recipe-instructions h3 {
+  font-size: 24px;
+  color: #333;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  letter-spacing: 0.5px;
+}
+
+.recipe-ingredients ul {
+  list-style-type: disc;
+  margin-left: 30px;
+}
+
+.recipe-ingredients li {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 10px;
+  transition: color 0.3s ease;
+}
+
+.recipe-ingredients li:hover {
+  color: #007bff;
+}
+
+.recipe-instructions p {
+  font-size: 18px;
+  color: #555;
+  line-height: 1.8;
+  letter-spacing: 0.5px;
+}
+
+.add-to-cart-btn {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  font-size: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.add-to-cart-btn:hover {
+  background-color: #218838;
+  transform: scale(1.05);
+}
+
+/* Responsive Design for Mobile Devices */
+@media (max-width: 768px) {
+  .recipe-detail {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .recipe-image-container {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .recipe-info {
+    width: 100%;
+    text-align: center;
+  }
+
+  .recipe-title {
+    font-size: 28px;
+  }
+
+  .recipe-description {
+    font-size: 16px;
+  }
+
+  .recipe-additional-details {
+    width: 90%;
+  }
+
+  .add-to-cart-btn {
+    font-size: 18px;
+  }
+}
+
